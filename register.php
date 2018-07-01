@@ -135,7 +135,7 @@ if(!$error) {
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="stylemylog.css">
 </head>
-<body class="text-center">
+<body class="text-center bg">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 <h1 class = "mb-4 font-weight-bold welcome">Sign Up.</h1>
           
