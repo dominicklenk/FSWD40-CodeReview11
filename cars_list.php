@@ -16,45 +16,9 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 ?>
 
-<!-- HTML -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Cars list - <?php echo $userRow['email']; ?></title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style2.css">
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="fas fa-car navbar-brand" href="home.php">Home</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fab fa-opencart"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Choose Here!
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="office_list.php">choose your office</a>
-          <a class="dropdown-item" href="cars_list.php">choose your car</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="cars_locations.php">go to your favourite location</a>
-        </div>
-      </li>
-    </ul>
-    <li class="form-inline my-2 my-lg-0">
-      <span class="mr-5">Hello <?php echo $userRow['user_name']; ?></span>
-      <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php?logout"><i class="fas fa-sign-out-alt">&nbsp;</i>Log Out</a>
-    </ul>
-  </div>
-</nav>
-<!-- navbar end-->
+<!--            --------          start HTML            -------           -->
+<!-- html, and the div container -->
+<?php include('navbar.php'); ?>
 
 <?php
 $q_offices = "
@@ -72,8 +36,8 @@ $output = "";
 $rows_offices = $r_offices->fetch_all(MYSQLI_ASSOC);
 $output .= "
 <div class='container'>
-	<h1 class = \"mt-5\">KLENK cars list</h1>
-	<table class='table table-striped table-responsive'>
+	<h1 class = \"mt-5\">Have a look at our range of cars</h1>
+	<table class='table table-striped table-responsive mt-3'>
 		<thead>
 			<tr>
 				<th></th>
@@ -92,6 +56,7 @@ $output .= "
 
            		$color = 'red';
            		if($row['status'] == 'available') $color = 'green';
+                                             // define color for availability of the cars styled then in css
 
            		$output .= "<tr>";
         		$output .= "<td>".$x."</td>";
@@ -101,7 +66,9 @@ $output .= "
         		$output .= "<td>".$row['description']."<br></td>";
         		
                 $output .= "<td> &euro; ".str_replace('.',',',$row['car_dailyprice'])."</td>";
+                                               // replace the . with , and set € before price
                 $output .= "<td style=\"color:".$color."\">".$row['status']."<br></td>";
+                                               // setting colors for availability instyle with variable
                 $output .= "<td>".$row['c_address']."<br></td>";
                 $output .= "</tr>";      
                 $x++;
@@ -112,6 +79,5 @@ echo $output;
 echo "<hr>";
 ?>
 
-
-</body>
-</html>
+<!--         --------      start of footer & end div & html         -------           -->
+<?php include('footer.php'); ?>

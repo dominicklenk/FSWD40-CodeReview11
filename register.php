@@ -132,13 +132,10 @@ if(!$error) {
 <head>
 <title>Login & Registration System</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="stylemylog.css">
 </head>
-<body class="">
+<body class="text-center">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 <h1 class = "mb-4 font-weight-bold welcome">Sign Up.</h1>
           
@@ -152,6 +149,8 @@ if(!$error) {
 <?php
   }
   ?>
+
+<!-- begin of form -->
 <input type="text" name="first" class="form-control" placeholder="Enter your first name" maxlength="50" value="<?php echo $first ?>" />
 <span class="text-danger"><?php echo $firstError; ?></span>
 <input type="text" name="last" class="form-control" placeholder="Enter your last name" maxlength="50" value="<?php echo $last ?>" />
@@ -168,7 +167,11 @@ if(!$error) {
 <hr />
         <a href="index.php">Log in Here...</a>
 </form>
+<!-- end of form -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 <?php ob_end_flush(); ?>
