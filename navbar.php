@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
   <a class="fas fa-car navbar-brand" href="home.php">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fab fa-opencart"></span>
@@ -32,7 +32,7 @@
     <!-- echo Hello to the user_name -->
 
     <li class="form-inline my-2 my-lg-0">
-      <span class="mr-5">Hello <?php echo $userRow['user_name']; ?></span>
+      <span class="mr-5">Hello <?php echo $userRow['user_name'] . "!"; ?></span>
       <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php?logout"><i class="fas fa-sign-out-alt">&nbsp;</i>Log Out</a>
     </ul>
   </div>

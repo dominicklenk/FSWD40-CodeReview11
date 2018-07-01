@@ -1,7 +1,7 @@
 </div>
 <!--   --------   The End of the content here/ container closed        -------       -->
 	<!-- Start with footer and distance -->
-	<footer class="footer">
+	<footer class="footer fixed-bottom">
       <div class="container">
         <h4 class="text-center">Car Rental/ Dominic Klenk 2018 &copy CodeFactory</h4>
       </div>

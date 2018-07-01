@@ -1,3 +1,12 @@
+/*				main site and content
+														*/
+
+/* 		background image 		*/
 body {
 	background: url('https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat; background-size: cover;
+}
+
+/* 		settings for footer 		*/
+footer {
+	background-color: #778899; opacity: 0.8;
 }

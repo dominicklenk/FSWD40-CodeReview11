@@ -51,6 +51,7 @@ $output .= "
         		$output .= "<td>".$row['address']."<br></td>";
                 $output .= "<td>".$row['phone']."</td>";
                 $output .= "<td><a href=\"https://www.google.com/maps/@".$row['office_lat'].",".$row['office_lnt'].",15z\" target=\"_blank\">Find in Google Maps</a></td>";
+                								// finding the specific coordinates on google maps after clicking on link!
                 $output .= "</tr>";      
                 $x++;
             }
