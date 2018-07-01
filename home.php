@@ -26,6 +26,7 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 
 <!--         --------      start of footer & end div & html         -------           -->
+
 <?php include('footer.php'); ?>
 
 <?php ob_end_flush(); ?>

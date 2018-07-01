@@ -136,8 +136,13 @@ if(!$error) {
 <link rel="stylesheet" type="text/css" href="stylemylog.css">
 </head>
 <body class="text-center bg">
+<div class="container-fluid">
+<div class="row">
+    <!-- set 2 columns for the middle way-->
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-<h1 class = "mb-4 font-weight-bold welcome">Sign Up.</h1>
+<h1 class = "mb-4 font-weight-bold">Sign Up first.</h1>
           
            <?php
   if ( isset($errMSG) ) {
@@ -169,6 +174,10 @@ if(!$error) {
 </form>
 <!-- end of form -->
 
+<!-- end row -->
+  </div>
+<!-- end div container -->
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

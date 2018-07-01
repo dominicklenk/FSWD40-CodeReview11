@@ -1,3 +1,16 @@
+/*				login & registration
+														*/
+
+/* 		center the content 		*/
+body {
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/*		background image		*/
 .bg {
 	background: url('img/driving.jpg') no-repeat; background-size: cover;
 }

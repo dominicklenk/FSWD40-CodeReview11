@@ -72,11 +72,12 @@ if( $count == 1 && $row['password']==$password ) {
 <body class="text-center bg">
 <div class="container-fluid">
   <div class="row">
+    <!-- set 2 columns for the middle way-->
     <div class="col-md-4 col-sm-4 col-xs-12"></div>
     <div class="col-md-4 col-sm-4 col-xs-12">
       <!-- form start -->
 <form class="form-group" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
-<h1 class="mb-4 font-weight-bold welcome">Welcome to the PHP car rental Portal! </h1>          
+<h1 class="mb-4 font-weight-bold">Welcome to the PHP car rental Portal! </h1>          
            <?php
   if ( isset($errMSG) ) {
 echo $errMSG; ?>
@@ -90,7 +91,7 @@ echo $errMSG; ?>
 <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Your Password" maxlength="15" required/> 
 <span class="text-danger"><?php echo $passError; ?></span>
 <button type="submit" class="btn btn-lg btn-primary btn-block" name="btn-login">Log In</button>
-<h3 class="mt-3">OR</h3>
+<h3 class="mt-4">OR</h3>
             <a class="font-weight-bold" href="register.php">Sign Up Here...</a>
 </form>
 <!-- form end -->
