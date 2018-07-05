@@ -1,10 +1,8 @@
 </div>
 <!--   --------   The End of the content here/ container closed        -------       -->
 	<!-- Start with footer and distance -->
-	<footer class="footer fixed-bottom">
-      <div class="container">
+	<footer class="footer">
         <h4 class="text-center">Car Rental/ Dominic Klenk 2018 &copy CodeFactory</h4>
-      </div>
     </footer>
 <!--            --------          End of footer & html            -------           -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

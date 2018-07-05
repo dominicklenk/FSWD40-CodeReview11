@@ -13,20 +13,14 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fab fa-opencart"></span>
   </button>
-
+  <?php 
+      if ($_SESSION['user'] == "2" ) {
+      echo "<a class='form-inline' href='cars_per_location.php'>Admins Site</a>";
+      } 
+      ?>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Choose Here!
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="office_list.php">choose your office</a>
-          <a class="dropdown-item" href="cars_list.php">choose your car</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="cars_locations.php">go to your favourite location</a>
-        </div>
-      </li>
+
     </ul>
 
     <!-- echo Hello to the user_name -->
@@ -34,7 +28,7 @@
     <li class="form-inline my-2 my-lg-0">
       <span class="mr-5">Hello <?php echo $userRow['user_name'] . "!"; ?></span>
       <a class="btn btn-outline-success my-2 my-sm-0" href="logout.php?logout"><i class="fas fa-sign-out-alt">&nbsp;</i>Log Out</a>
-    </ul>
+
   </div>
 </nav>
 

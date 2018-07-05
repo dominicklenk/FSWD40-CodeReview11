@@ -16,9 +16,9 @@ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 
 ?>
 
-<!--            --------          start HTML            -------           -->
+<!--            --------    hided      start HTML            -------           -->
 <!-- html, and the div container -->
-<?php include('navbar.php'); ?>
+<!-- ?php include('navbar.php'); ? -->
 
 
 <?php
@@ -62,5 +62,5 @@ echo $output;
 echo "<hr>";
 ?>
 
-<!--         --------      start of footer & end div & html         -------           -->
-<?php include('footer.php'); ?>
+<!--         --------   hided   start of footer & end div & html         -------           -->
+<!-- ?php include('footer.php'); ? -->
